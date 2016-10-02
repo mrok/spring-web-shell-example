@@ -1,0 +1,26 @@
+buildscript {
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'spring-boot'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.18'
+    compile("org.springframework.boot:spring-boot-starter-web:1.4.1.RELEASE")
+    compile 'org.springframework.boot:spring-boot-starter-remote-shell:1.1.8.RELEASE'
+    testCompile 'junit:junit:4.12'
+}
